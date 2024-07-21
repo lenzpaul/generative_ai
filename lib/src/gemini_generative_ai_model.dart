@@ -1,11 +1,11 @@
 import 'package:generative_ai/generative_ai.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
 
-class GeminiGenerativeAiModel implements GenerativeAiModel {
+class Gemini implements GenerativeAiModel {
   final GeminiConfig config;
   late final GenerativeModel gemini;
 
-  GeminiGenerativeAiModel({required this.config}) {
+  Gemini({required this.config}) {
     gemini = GenerativeModel(
       model: config.model,
       apiKey: config.apiKey,
