@@ -1,4 +1,4 @@
-import 'package:generative_ai/src/message.dart';
+import 'package:generative_ai/src/conversation_message.dart';
 
 abstract class GenerativeAiModel {
   /// Given a prompt, returns a response.

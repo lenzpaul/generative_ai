@@ -1,5 +1,4 @@
 import 'package:generative_ai/generative_ai.dart';
-import 'package:generative_ai/src/message.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
 
 class Gemini implements GenerativeAiModel {
