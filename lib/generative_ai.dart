@@ -4,3 +4,4 @@ library generative_ai;
 
 export 'src/generative_ai.dart';
 export 'src/gemini_generative_ai_model.dart';
+export 'src/message.dart';
