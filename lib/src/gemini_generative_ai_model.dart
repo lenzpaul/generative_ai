@@ -1,4 +1,5 @@
 import 'package:generative_ai/generative_ai.dart';
+import 'package:generative_ai/src/message.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
 
 class Gemini implements GenerativeAiModel {
@@ -22,6 +23,7 @@ class Gemini implements GenerativeAiModel {
   }
 
   /// Prompt wiht previous context
+  @override
   Future<String?> promptWithContext(List<Message> messages) async {
     List<Content> content = messages.map((message) {
       switch (message.author) {
@@ -46,13 +48,4 @@ class GeminiConfig extends GenerativeAiModelConfig {
     required super.model,
     required super.apiKey,
   });
-}
-
-enum MessageAuthor { user, ai }
-
-class Message {
-  final String text;
-  final MessageAuthor author;
-
-  Message(this.text, this.author);
 }

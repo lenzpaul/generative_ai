@@ -1,6 +1,9 @@
+import 'package:generative_ai/src/message.dart';
+
 abstract class GenerativeAiModel {
   /// Given a prompt, returns a response.
   Future<String?> prompt(String prompt);
+  Future<String?> promptWithContext(List<Message> messages);
 }
 
 class GenerativeAiModelConfig {
