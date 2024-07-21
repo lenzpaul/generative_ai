@@ -24,7 +24,7 @@ class Gemini implements GenerativeAiModel {
 
   /// Prompt wiht previous context
   @override
-  Future<String?> promptWithContext(List<Message> messages) async {
+  Future<String?> promptWithContext(List<ConversationMessage> messages) async {
     List<Content> content = messages.map((message) {
       switch (message.author) {
         case MessageAuthor.user:
